@@ -1,33 +1,16 @@
-num1 = input("Введите первое число: ")
-num2 = input("Введите второе число: ")
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+operation = input("Выберите операцию (+, -, *, /): ")
 
-print("Первое число:", num1)
-print("Второе число:", num2)
-
-message = 'message — многострочная текстовая переменная, которая обозначается тремя кавычками '
-
-'''
-Выберете математическую операцию:
-
-+ : Сложение
-- : Вычитание
-/ : Деление
-* : Умножение
-
-Ваш выбор:
-'''
-
-# спрашиваем у пользователя, какую операцию он хочет выбрать
-operation = input(message)
-
-# выводим выбранную операцию (или сообщение об ошибке)
-if operation == '+':
-    print('Сложение')
-elif operation == '-':
-    print('Вычитание')
-elif operation == '/':
-    print('Деление')
-elif operation == '*':
-    print('Умножение')
+if operation == "+":
+    result = num1 + num2
+elif operation == "-":
+    result = num1 * num2
+elif operation == "*":
+    result = num1 * num2
+elif operation == "/":
+    result = num1 / num2
 else:
-    print('Неизвестная операция')
+    print("Неверная операция!")
+
+print("Результат:", result)
